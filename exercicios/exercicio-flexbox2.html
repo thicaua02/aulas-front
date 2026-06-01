@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Exercício Flexbox</title>
+    <style>
+        *,
+        *::before,
+        *::after {
+            box-sizing: border-box;
+        }
+
+        body,
+        h1,
+        h2,
+        p {
+
+            margin: 0;
+            padding: 0;
+        }
+
+         body { font-family: Arial, sans-serif; }
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px;
+            background: #8fe2f9;
+            height: 150px;
+        }
+         nav{
+            background-color: rgb(252, 252, 127);
+            position: sticky;
+            top: 0;
+            min-height: 80px;
+            display: flex;
+            gap: 30px;
+            justify-content: flex-end;
+            align-items: center;
+            flex-direction: row;
+
+            a{ 
+                text-decoration: none;
+                color: rgb(0, 0, 0);
+                padding: 1rem;
+                margin-block: 10px;
+                border-radius: 11px;
+                text-decoration: dashed;
+                font-weight:bold;
+                &:hover,
+                &:focus {
+                    color: darkblue;
+
+                }
+            }
+            
+        }
+          .cards{ 
+             display: flex;
+             justify-content: center;
+             align-items: flex-start;
+             align-content:flex-start;
+             gap: 1.2rem;
+             margin-block: 2rem;
+             
+             height: 250px;
+            }
+            .card{
+                 flex-direction: row;
+                 width: 250px;
+                 height: 200px;
+                 padding: 1rem;
+                 background-color: white;
+                 box-shadow: rgba(0, 0, 0, 0.594)0 0 10px;
+                 border-radius: 4px;
+            }
+             
+
+             
+            
+            
+            
+            
+
+
+             
+
+
+
+
+
+
+    </style>
+</head>
+
+<body> <header><h1>Exercício Flexbox</h1></header>
+    
+    
+    <nav>
+
+        <a href="">Início</a>
+        <a href="">Notícias</a>
+        <a href="">Cursos</a>
+        <a href="">Contato</a>
+
+    </nav>
+
+
+    <main class="cards">
+        <article class="card">
+            <h2>Nova IA no mercado </h2>
+            <p>Tecnologia promete revolucionar o setor.</p>
+        </article>
+        <article class="card">
+            <h2>CSS moderno </h2>
+            <p>Novos recursos chegam aos navegadores</p>
+        </article>
+        <article class="card">
+            <h2>JavaScript 2026 </h2>
+            <p>Atualizações e melhores práticas</p>
+        </article>
+        <article class="card">
+            <h2>Frameworks em alta </h2>
+            <p>Quais tecnologias dominarão o mercado</p>
+        </article>
+
+
+
+
+
+    </main>
+
+
+
+</body>
+
+</html>

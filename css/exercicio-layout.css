@@ -1,0 +1,142 @@
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif
+}
+
+html,
+body,
+.tudo {
+    height: 100%;
+}
+
+h1 {
+    font-size: min(6vw, 50px);
+}
+
+h2 {
+    font-size: min(4vw, 35px);
+    text-align: center;
+    color: white;
+}
+
+aside {
+    position: fixed;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 170px;
+    gap: 2px;
+
+    background: linear-gradient(180deg, #263B8A, #7B25D4);
+    flex-direction: column;
+    display: flex;
+    padding-inline: 16px;
+
+
+
+    a {
+        text-decoration: none;
+        color: rgb(255, 255, 255);
+        padding: 16px;
+
+        &:hover {
+            border-radius: 10px;
+            background-color: rgba(255, 255, 255, 0.2);
+        }
+
+    }
+
+}
+
+.container {
+    margin-inline-start: 170px;
+}
+
+.cards {
+    display: flex;
+    justify-content: space-around;
+    gap: 16px;
+
+    article {
+        background-color: #E3E8F0;
+        flex-grow: 1;
+        flex-shrink: 1;
+        padding-inline: 15px;
+        border-radius: 16px;
+    }
+}
+
+.cards>article:nth-child(2) {
+    flex-grow: 2;
+}
+
+main {
+    padding: 20px;
+}
+
+
+header {
+    background: linear-gradient(to right, #EF8542, #E10A20);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-inline: 18px;
+    color: white;
+    height: 70px;
+
+
+    p {
+        color: black;
+        background-color: rgb(255, 255, 255);
+        padding: 5px;
+    }
+
+
+}
+
+.lista-atividades {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+
+}
+
+.item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 16px;
+    height: 70px;
+
+
+    h4 {
+        background-color: #FABACD;
+    }
+
+    p {
+        background-color: #99FE95;
+        flex-grow: 1;
+
+    }
+
+    time {
+        background-color: #B3DDE6;
+
+    }
+
+    * {
+        flex-grow: 0;
+        flex-shrink: 1;
+        flex-basis: 125px;
+        height: 50px;
+        padding-inline: 10px;
+        padding-block: 5px;
+
+    }
+}

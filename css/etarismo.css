@@ -1,0 +1,270 @@
+body {
+
+
+
+
+
+    background-image: url(../Imagens/drift.jpg);
+
+    /* Forçando a imagem a ocopuar todo espaço dísponivel */
+    background-size: cover;
+
+    /* Prendendo a imagem de fundo, evitando rolagens */
+    background-attachment: fixed;
+
+    font-family: Helvetica, sans-serif;
+    line-height: 1.5;
+    color: #000000;
+    margin: 0;
+
+}
+
+h1 {
+    margin: 0;
+    padding: 0;
+    font-family: Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+header {
+    /* Valores quebrados, posso omitir o número 0 */
+    opacity: .5;
+    background-color: rgb(132, 255, 249);
+    color: rgba(0, 0, 0, 0.425);
+    /* text-align: center; */
+
+    /* Enchimento (ou espaçamento interno) */
+    padding-block: 20px;
+    text-align: center;
+    position: sticky;
+    top: 0;
+    /* Fazendo com que o header fica sempre por cima (ou a frente) de outros elementos */
+    z-index: 100;
+}
+
+h2 {
+    text-transform: uppercase;
+    text-align:
+        color: rgb(0, 0, 0);
+    border-inline-start: rgb(151, 0, 151) 2px solid;
+    border-block-end: purple 2px solid;
+}
+
+
+h3 {
+    text-align: center;
+    font-size: 24px;
+    color: rgb(255, 255, 255);
+    text-shadow:
+        rgb(0, 0, 0) 6px 7px 8px,
+        blue 7px 8px 9px,
+        brown 9px 10px 11px
+}
+
+
+strong {
+    background-color: rgba(255, 255, 0, 0.651);
+}
+
+
+/* Seletor DESCENDENTE */
+p strong {
+    border: solid 3px rgba(0, 219, 208, 0.507);
+    background-color: rgba(0, 204, 194, 0.541);
+    color: white;
+}
+
+main {
+    width: 90%;
+    margin-inline: auto;
+    background-color: rgba(132, 255, 249, 0.336);
+    padding: 20px;
+    border-radius: 40px;
+    box-shadow:
+        rgba(0, 0, 0, 0.288) 5px 6px 7px,
+        white 8px 9px 10px;
+    margin-block-start: 30px;
+
+
+}
+
+.lista {
+    margin-inline: auto;
+    width: 60%;
+}
+
+footer {
+
+    text-align: end;
+    color: rgb(255, 255, 255);
+    border-radius: 10px;
+    margin-inline: auto;
+    width: 90%;
+    box-shadow:
+        rgb(0, 0, 0) 10px 10px 10px,
+        white 10px 10px 10px;
+    font-family: Helvetica, sans-serif;
+    padding: 10px;
+    margin-block-start: 30px;
+    border-block-start: 20px rgb(152, 243, 255) solid;
+
+    background-image: linear-gradient(45deg blue, rgb(146, 11, 11));
+}
+
+.secao {
+    text-align: center;
+}
+
+
+p {
+    font-family: Verdana, sans-serif;
+    font-size: 14px;
+}
+
+
+/* Seletor CLASSE */
+.destaque {
+    color: rgb(152, 0, 253);
+    font-style: italic;
+}
+
+.sombra-texto {
+    text-shadow: black 1px 2px 3px;
+}
+
+.sombra-caixa {
+    box-shadow: red 0 0 5px;
+}
+
+.link-saiba-mais a {
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+    background-color: rgba(255, 251, 0, 0.5);
+    padding: 5px;
+    border-radius: 5px;
+}
+
+/* Seletor de PSEUDO-CLASSE 
+Sempre inicia com dois-pontos::afterNormalmente, a pseudo-classe está ligada
+a algum elemento*/
+.link-saiba-mais a:hover {
+    background-color: lightblue;
+}
+
+.exemplo-dois {
+    text-align: center;
+}
+
+.exemplo-dois a {
+    text-decoration: none;
+    font-weight: bold;
+    color: black;
+    background-color: yellow;
+    padding: 4px;
+}
+
+nav {
+    background-color: black;
+
+    ul {
+        /* Removendo os marcadores da lista */
+        list-style: none;
+
+        /* Removendo o espaçamento padrão do navegador */
+        margin: 0;
+        padding: 0;
+
+        /* Habilitado o flexbox para ajustes de alinhamento */
+        display: flex;
+        justify-content: space-evenly;
+
+        a {
+            text-decoration: none;
+            color: white;
+            font-weight: bold;
+            font-size: 18px;
+
+            &:hover,
+            &:focus {
+                background-color: rgb(48, 48, 48);
+            }
+
+
+            &.link-ativo {
+                background-color: rgb(95, 95, 95);
+            }
+
+
+
+
+
+        }
+
+    }
+
+}
+
+.ativado,
+nav a:hover,
+nav a:focus {
+    background-color: red;
+    color: rgb(97, 12, 12);
+
+}
+
+/* tornando as imagens flex[iveis/responsivas */
+img {
+    max-width: 100%;
+}
+
+figure {
+    margin: 0;
+    padding: 0;
+    max-width: 640px;
+    width: 100%;
+    margin-inline: auto;
+    position: relative;
+
+    figcaption {
+        font-weight: bold;
+        font-size: 18px;
+        position: absolute;
+        background-color: turquoise bottom: 60px;
+        width: 100%;
+        padding-block: 10px;
+        text-align: center;
+
+    }
+
+
+
+}
+
+/* Pseudo-elemento ::marker */
+.exemplos-comuns li::marker {
+    content: "😊 ";
+    font-size: 20px;
+}
+
+/* pseudo-classes: firts-child,:last-child e nth-child */
+.exemplos-comuns li:last-child {
+    font-style: italic;
+}
+
+.exemplos-comuns li:nth-child(3) {
+    color: red
+}
+/* Resetamos o Summary */
+summary{
+    list-style: none;
+    cursor: pointer;
+    user-select: none;
+}
+/* Definimos o ícone padrão no estado inicial do summary */
+summary::before{
+    content: "😎";
+}
+/* Seletor de [atributo]
+definimos, quando o details estiver aberto (open), outro ícone para o summary */
+details[open] summary::before{
+    content: 😂;
+}

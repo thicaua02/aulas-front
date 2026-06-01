@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Pesquisas e tarefas</title>
+        
+    </head>
+    <style>
+        *,
+        *::before,  *::after {box-sizing: border-box;}
+        
+        :root{ 
+            --cor-fundo:rgb(62, 65, 255);
+            --cor-texto: rgb(255, 255, 255);
+            --espacamento-padrão:1.5rem;
+            --cor-primaria:blue;
+            --cor-secundaria:aqua;
+            --raio-borda:15px
+        }
+        
+        body{  
+            background-color: var(--cor-fundo);
+        
+            color: var(--cor-texto);
+            font-family: sans-serif;
+            margin: 15px;
+            padding: 50px
+        }
+         h1,h2{ color: #ffffff;
+            text-shadow:
+                0 0 5px #000000,
+                0 0 10px #000000,
+                0 0 20px #000000,
+                0 0 40px #000000;}
+    .box{ 
+        background-color: rgb(40, 163, 163);
+        text-align:center;
+        margin: 0;
+        height: 50px;
+        border: dashed 2px black;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 0 1rem;
+    }
+    .content{
+        display: flex;
+        justify-content: start;
+        gap: 1rem;
+        flex-wrap: wrap;
+        margin-top: 10px;
+    }
+    .exemplo-min{  height: 80px;
+        width: min(50%, 300px);}
+     
+    .exemplo-max{height:80px; 
+        width: max(40%, 300px); }
+     
+    .exemplo-clamp{ font-size:clamp(1.5rem, 2vw,3rem);
+                     margin-top:15px          }
+
+     #div1{
+        width:calc(40% - 100px);
+        border: 2px dashed black;
+        background-color:rgb(40, 163, 163);
+        padding: 1px;
+        text-align:center;
+     }
+     
+     hr{ border-color: aqua;
+    }
+        
+        </style>
+
+<body>
+    
+    <h1>Pesquisa e demonstração: funções do CSS</h1>
+    
+    <hr>
+    
+    <h2>Codígos para pesquisa</h2>
+    <ul>
+    
+        <li>min ()</li>
+        <li>max ()</li>
+        <li>calc ()</li>
+        <li>clamp ()</li>
+    
+    </ul>
+    
+    <hr>
+    
+    <h2> Exemplos e suas funções</h2>
+
+    <div class="content">
+        <div class="box exemplo-min"> <p>Aqui usamos min</p></div>
+        <div class="box exemplo-max"><p>Aqui usamos max</p></div>
+        <div id ="div1"><p>Aqui usamos calc</p></div>
+        <div class="box exemplo-clamp"><p>Aqui usamos clamp</p></div>
+    </div>
+
+    <hr>
+
+      <ul>
+    
+        <li><p>min () = Definição de menor valor entre dois ou mais argumentos, ex: px, %, vw e rem. <i> ex: A função min() pode ser usada para definir largura de #div1 para no máximo 300px, mas um menor valor caso a largura da janela de vizualição for menor que 600px.</i>
+        </p> </li>
+        <li><p>max () = Definição de maior valor entre uma lista de expressões separadas por vírgula como o valor da propriedade. <i>ex: A função min() pode ser usada para definir largura de #div1 pelo menos 300px, mas um valor 50% maior caso a largura da janela de vizualição for maior que 600px.</i> </p></li>
+        <li><p>calc () = Essa função me permite fazer cálculos quando especificar valores de propriedade no CSS</p></li>
+        <li><p>clamp () = Definição de valores responsivos entre minímo, preferencial e máximo, dependendo do tamanho da janela de vizualição.</p></li>
+    
+    </ul>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+
+
+
+
+
+    
+  
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+
+</html>
