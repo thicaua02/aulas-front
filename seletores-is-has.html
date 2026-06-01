@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Seletores Modernos</title>
+</head>
+<style>
+    *,*::before,*::after { box-sizing: border-box;}
+
+       :root{
+        --cor-destaque: rgb(255, 1, 1);
+        --cor-borda: rgb(255, 0, 13);
+        
+       }
+
+
+
+
+         body{
+            font-family: sans-serif;
+            padding: 2rem;
+            background-color: aqua;
+         }
+
+         article{
+            background-color: rgb(255, 255, 255);
+            border: solid 2px var(--cor-borda);
+            border-radius: 12px;
+            padding: 1.5rem;
+            max-width: 400px;
+            margin-inline: auto;
+            margin-block: 2rem;
+         }
+         img{max-width:100% ;}
+
+         a{
+            text-decoration: none;
+            background-color: var(--cor-destaque);
+            color: rgb(255, 255, 255);
+            padding: 0,5 rem
+        }
+
+        /* Agrupamos dentro do contexto do article usando pseudo-classe:is() e formatamos os elementos ali contidos */
+        article :is(h2, p, span) { color: rgb(0, 0, 0); }
+        /* Usamos o :has() para, através de uma condição baseada no filho, conseguir formatar o pai. */
+        article:has(img) {
+        background-color: rgb(72, 163, 133);
+        border-color:rgb(132, 0, 255); 
+    }
+         article:has(a:hover){
+            box-shadow: red 0 0 10px;
+            
+         }
+
+
+</style>
+<body>
+    <h1>Usando seletores <code>:is</code>e <code>:has</code></h1>
+
+    <article> 
+        <h2>Exemplo 1</h2>
+        <p>Aqui temos um texto qualquer</p>
+        <span>aqui outro texto...</span>        
+    </article>
+
+    <article>
+             <img src="Imagens/front-end.jpg" alt="Imagem Front end">
+             <h2>Exemplo 1: artigo com imagem</h2>
+             <p>Aqui temos imagem e texto</p>
+    </article>
+
+    <article>
+        <h2>Exemplo 3: texto com link</h2>
+        <p>Texto qualquer....</p>
+        <a href="">Link qualquer</a>
+    </article>
+
+    <hr>
+    <h2> Outro titulo...</h2>
+    <p>Outro texto...</p>
+    <span>Outro texto do span</span>
+</body>
+</html>

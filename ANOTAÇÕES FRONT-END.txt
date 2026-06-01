@@ -1,0 +1,219 @@
+Editores de Código
+
+- VSCode (Visual Studio Code) -> MAIS USADO
+- Notepad++
+- Bloco de notas (para quem gosta de sofrer)
+- Cursor (IA integrada)
+- Sublime Text
+- Brackets
+- Adobe Dreamweaver
+- Antigravity (IA integrada)
+- Vim (ambiente Linux)
+
+
+
+
+
+
+
+
+
+Visual Studio Code
+
+- Extensões: Portuguese Brasil, Live Server e Material Icon Theme
+
+- Atalho para configurações no VSCode: CTRL ,
+Configurações feitas: font size, word wrap on, desativar o stick scroll e ativar o salvamento automático
+
+
+
+
+
+- Atalhos
+
+CTRL ;				-> Comentários
+ALT + SETA CIMA/BAIXO		-> Mover linhas
+SHIFT + ALT + SETA CIMA/BAIXO	-> Duplicar linhas
+
+
+
+
+
+
+
+
+
+- Elementos
+
+A maioria das tags é codificada assim:
+<tag> </tag>
+
+Exceções: <br>, <hr>, <meta>
+
+- Atributos: agrega informações à tag
+Sempre colocados DENTRO da tag de abertura
+
+<html lang="">
+<meta charset="">
+<details name="">
+
+
+
+
+
+---
+
+Hiperlink (ou link): recursos de navegação
+
+
+
+
+
+
+
+
+
+Tags semânticas para áreas de conteúdo
+
+-header: cabeçalho/área superior
+-nav: menu de navegação principal
+-main: área de conteúdo principal
+-footer: rodapé/área inferior
+
+-article: bloco de conteúdo de alta relevância, podendo ser independente
+-section: bloco de conteúdo temático; uma subdivisão por tema/assunto
+
+-aside: conteúdo complementar/auxiliar
+
+
+
+
+<header>
+  <h1></h1>
+  <nav></nav>
+</header>
+
+<main>
+  <article>
+    <aside></aside>
+  </article>
+  <article></article>
+  <article>
+    <section></section>
+    <section></section>
+    <section></section>
+  </article>
+</main>
+
+<footer></footer>
+
+
+
+---
+
+Multimídia: áudio e vídeo
+
+---
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Sobre CSS
+- Folhas de Estilo em Cascata
+- Linguagem de estilos e animações/interações
+
+3 formas de implementação
+- INLINE: CSS dentro de cada TAG (usada somente em caso de emergência)
+- INTERNA/ONPAGE: CSS dentro de cada página
+- EXTERNA: CSS em um arquivo separado/dedicado (com extensão .css) e conectado em páginas HTML
+
+
+Sintaxe geral de uma regra CSS:
+
+seletor {
+  propriedade1: valor;
+  propriedade2: valor;
+  propriedadeN: valor;
+}
+
+Dica: pense no seletor como o ALVO/ELEMENTO
+a ser estilizado.
+
+Tipos de seletores:
+-TAG: permite estilizar a tag especificada
+-DESCENDENTE: permite estilizar elemento(s) que são "filho(s)" de outro elemento.
+
+
+
+
+
+
+
+
+
+
+
+---
+
+Ferramentas do Desenvolvedor (DevTools)
+- F12 ou botão direito e Inspecionar
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Sobre CAIXAS/BOXES
+
+Tudo no CSS é encarado como caixa.
+Mas há algumas poucas "caixas" que possuem seu tamanho baseado SOMENTE em seu próprio conteúdo. Exemplos: a, b, Strong, i, span, em, u
+
+No entanto, a maioria das tags é uma "caixa" que ocupa TODO O ESPAÇO DISPONÍVEL no local em que está. Exemplos: h1/h6, p, figure, ul/ol, enfim, a maioria.
+
+
+---
+
+- propriedades lógicas: start/end
+
+- CSS Nesting (regra dentro de regra ou regras ANINHADAS)
+
+
+
+
+
+
+
+
+
+
+

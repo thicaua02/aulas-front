@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício Layout Responsivo</title>
+    <style>
+        *,
+        *::before,
+        *::after {
+            box-sizing: border-box;
+        }
+
+        :root {
+            --cor-fundo: rgb(252, 250, 145);
+            --cor-header: rgb(57, 57, 255);
+            --cor-link: rgb(255, 255, 62);
+            --cor-texto: rgb(0, 0, 0);
+            --espacamento-padrão: 1.5rem;
+            --cor-primaria: green;
+            --cor-secundaria: orange;
+            --cor-terceraria: pink;
+            --cor-footer: rgb(100, 100, 100);
+            --raio-borda: 15px;
+        }
+        html{font-size: 16px;}
+        body,
+        h1,
+        h2,
+        p {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background-color: var(--cor-fundo);
+            color: var(--cor-texto);
+            font-family: sans-serif;
+            text-decoration: none;
+        }
+
+        header {
+            background-color: var(--cor-header);
+            text-align: center;
+            position: sticky;
+            padding: 1rem;
+            top: 0;
+            a{ background-color: var(--cor-link);
+                text-decoration: none;
+                
+
+            }
+        }
+       
+           
+
+        main {
+            display: flex;
+            flex-wrap: wrap;
+            gap:10px;
+            }
+
+            
+                    .coluna-a {
+                        background-color: var(--cor-primaria);
+                        
+                        
+                    }
+            
+                    .coluna-b {
+                        background-color: var(--cor-secundaria);
+            
+                    }
+            
+                    .coluna-c {
+                        background-color: var(--cor-terceraria);
+            
+            
+                    }
+
+
+
+
+
+
+        footer {
+            background-color: var(--cor-footer);
+
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1> Layout Responsivo </h1>
+        <nav>
+            <a href="">Link</a><a href="">Link</a><a href="">Link</a>
+
+        </nav>
+    </header>
+
+
+    <main>
+        <article class="coluna-a">
+
+            <h2>Coluna A</h2>
+
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil, est nobis aliquid iure laudantium culpa
+                ipsam minus neque molestias in nemo quam id fugiat ea? Necessitatibus velit dolore ipsum rem!</p>
+
+        </article>
+        <article class="coluna-b">
+
+            <h2>Coluna B</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae sint dicta, atque optio id officiis quos!
+                Quasi, maiores, atque sint consectetur dolor ea nostrum molestias necessitatibus unde minus repellendus
+                tenetur?</p>
+
+        </article>
+        <article class="coluna-c">
+
+            <h2>Coluna C</h2>
+
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum dolorem tenetur quod exercitationem ea eos
+                eligendi laboriosam impedit sit quo temporibus et, nisi incidunt officiis libero beatae, dignissimos
+                itaque dolore?</p>
+        </article>
+    </main>
+    <footer>
+        <h2>Rodapé</h2>
+        <p>Lorem ipsum dolor sit amet consectetu</p>
+    </footer>
+
+
+
+
+</body>
+
+</html>

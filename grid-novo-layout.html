@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grid - Novo Layout</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: system-ui, sans-serif;
+            padding: 20px;
+            background: #f4f4f4;
+        }
+
+        header {
+            background-color: aqua;
+            border-radius: 6px;
+            padding: 10px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-block-end: 0.5rem;
+        }
+
+        nav {
+            display: flex;
+            gap: 1rem;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: white;
+            background-color: blue;
+            padding: 4px;
+            border-radius: 8px;
+        }
+
+        footer {
+            background-color: #ccc;
+            text-align: center;
+        }
+
+        article {
+            border-radius: 6px;
+            font-weight: bold;
+            padding: 10px;
+        }
+
+        .promocao {
+            background-color: orange;
+            grid-area: promocao;
+        }
+
+        .destaque1 {
+            background-color: pink;
+            grid-area: destaque1;
+        }
+
+        .destaque2 {
+            background-color: purple;
+            grid-area: destaque2;
+        }
+
+        .banner1 {
+            background-color: greenyellow;
+            grid-area: banner1;
+        }
+
+        .banner2 {
+            background-color: rgb(75, 153, 255);
+            grid-area: banner2;
+        }
+
+        .banner3 {
+            background-color: rgb(255, 61, 61);
+            grid-area:banner3;
+        }
+
+        /* Definindo o grid para o conteúdo */
+
+        main {
+            
+            display: grid;
+            
+            gap: 1rem;
+
+            grid-template-columns: 1fr;
+            
+            /* Areas do Grid */
+ 
+            grid-template-areas: 
+            "promocao"
+            "destaque1"
+            "destaque2"
+            "banner1"
+            "banner2"
+            "banner3";
+            
+        }
+
+        @media (min-width: 700px) {
+            main{
+                grid-template-columns: 1fr 2fr 1fr;
+                /*  Novo Layout das Areas */
+                grid-template-areas: 
+                  "promocao destaque1 banner1"
+                  "promocao destaque2 banner2"
+                  "banner3 banner3 banner3";
+                
+                
+                
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h1>Meu Portal</h1>
+
+        <nav>
+            <a href="">Home</a>
+            <a href="">Produtos</a>
+            <a href="">Contato</a>
+        </nav>
+    </header>
+
+    <main>
+        <article class="promocao">Promoção</article>
+        <article class="destaque1">Destaque 1</article>
+        <article class="destaque2">Destaque 2</article>
+        <article class="banner1">Banner 1</article>
+        <article class="banner2">Banner 2</article>
+        <article class="banner3">Banner 3</article>
+    </main>
+
+    <footer>Rodapé</footer>
+
+</body>
+
+</html>

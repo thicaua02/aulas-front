@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Usando imagens no HTML</title>
+</head>
+
+<body>
+    <h1>Trabalhando com imagens</h1>
+    <hr>
+    <h2>Formatos mais comuns</h2>
+    <dl>
+
+        <dt>JPEG/JPG</dt>
+
+        <dd> Utilizado principalmente para fotos em geral com milhões de cores e compressão.</dd>
+
+        <hr>
+
+        <dt> GIF</dt>
+
+        <dd>Voltado para desenhos/ilustrações de poucas cores. Suporta também animação e transparência.</dd>
+
+        <hr>
+
+        <dt>PNG</dt>
+
+        <dd> Usado também para fotos com milhões de cores,com compressão e <b>suporte a transparência</b>.</dd>
+
+
+        <hr>
+
+        <dt> WebP</dt>
+
+        <dd> Formato mais moderno, com suporte a milhões de cores, transparência e animação.</dd>
+
+        <hr>
+
+        <dt>SVG</dt>
+
+        <dd>Formato vetorial, ou seja, não tem problemas com redimensionamento. Muito comum para uso em logotipos e
+            desenhos.</dd>
+    </dl>
+
+    <hr>
+
+    <h2> Exemplos</h2>
+
+    <h3> Tags e atributos</h3>
+
+    <!-- Sobre os atributos 
+                src -> indica o caminho e o arquivo que será exibido 
+                alt -> texto alternativo descrevendo brevemente a imagem ( muito importante para a acessibilidade da imagem) -->
+
+    <img src="Imagens/pink-floyd.jpg" alt="Integrantes da banda Pink Floyd acenando para o público," width="600"
+        height="375">
+
+    <h3>Imagens dentro de outras Tags</h3>
+
+    <p>
+
+        <img src="Imagens/cern_datacenter.jpg" alt="Data Center">
+
+        <hr>
+
+    </p>
+
+    <div>
+
+        <!-- Havendo espaço na tela, as imagens aparecem lado a lado -->
+
+        <img src="Imagens/cachorro.jpg" alt="">
+
+        <img src="Imagens/computer.gif" alt="">
+
+        <img src="Imagens/dedos.jpg" alt="">
+
+        <hr>
+
+    </div>
+
+    <!-- Nesta estrutura, mesmo que tenha espaço na tela, as imagens ficarão uma abaixo da outra.  -->
+
+    <div>><img src="Imagens/cachorro.jpg" alt="cachorro"></div>
+
+    <div><img src="Imagens/computer.gif" alt="computer"></div>
+
+    <div><img src="Imagens/dedos.jpg" alt="dedos"></div>
+
+    <hr>
+
+    <!-- Havendo espaço, fica lado a lado.
+         Acabou o espaço? O layout "quebra", fazendo com que as imagens fiquem uma abaixo da outra. -->
+
+    <div>
+        <img src="Imagens/apple.jpg" alt="apple">
+
+        <img src="Imagens/css.jpg" alt="css">
+
+        <img src="Imagens/destaque-html5.jpg" alt="destaque-html5">
+    </div>
+
+    <h3>Imagens (ou ilustrações em geral) com legenda</h3>
+
+    <!-- HTML5: com semântica ( a imagem tem relação com a legenda) -->
+    <figure>
+        <img src="Imagens/linguagens.png" alt="linguagens">
+        <figcaption>
+            Foto tirada pelo fotógrafo Samuel
+        </figcaption>
+
+    </figure>
+
+    <!-- Antes do HTML5: um bloco genérico, com imagem e texto qualquer -->
+
+    <div>
+
+        <img src="Imagens/nave.png" alt="Nave">
+        <p>Foto tirada pela fotógrafo Samuel</p>
+
+    </div>
+
+    <figure>
+
+        <img src="Imagens/logo-php.jpg" alt="">
+        <img src="Imagens/logo-mysql.gif" alt="">
+        <figcaption> Tecnologias do Back-End</figcaption>
+
+    </figure>
+
+    <h4> Exemplo: tutorial de JavaScript</h4>
+
+    <!-- Aqui temos uma ilustração de código, com um contexto dado pelo figure/figcaption -->
+
+    <figure>
+
+        <pre>
+
+            <code>
+                (nota1, nota2) => (nota1 + nota2) /2 <code>
+
+        </pre>
+
+        <figcaption>
+            Função Java Script que recebe 2 paramêtros e realiza o cálculo matemático de média.
+        </figcaption>
+
+
+    </figure>
+
+    <hr>
+
+    <h3>Web vs JPEG</h3>
+    <img src="Imagens/montanhas.webp" alt="">
+    <img src="Imagens/montanhas.jpg" alt="">
+    
+    <!-- Se possível, priorize o formato WebP por ser mais moderno e otimizado (melhor peso vs qualidade), além de suportar transparência e animação -->
+
+    <hr>
+    
+    <h3>SVG: fomarto de vetor para Web </h3>
+    
+    <img src="Imagens/black-cat.png" alt="">
+    <img src="Imagens/black-cat.svg" alt="">
+    
+</body>
+
+</html>

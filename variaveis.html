@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Variáveis no CSS</title>
+<style>
+      *,*::before,*::after { box-sizing: border-box;}
+      /* Declarando as variáveis no seletor:root */
+      :root{
+        --cor-primaria:blue;
+        --cor-secundaria:aqua;
+        --cor-fundo:rgb(232, 182, 255);
+        --cor-texto: rgb(255, 0, 0);
+        --espacamento-padrão:1.5rem;
+        --raio-borda:8px
+    }
+     body{
+        background-color: var(--cor-fundo);
+        color: var(--cor-texto);
+        font-family: sans-serif;
+        margin: 0px;
+        padding: 0px;
+
+     }
+         .explicacao{
+            /* Redeclaração da variável, ou seja, ela passa a valer APENAS neste escopo/regras */
+            background-color: rgb(255, 255, 255);
+            padding:var(--espacamento-padrão);
+            border-radius: 20px;
+            
+         }
+         h2,a{color:var(--cor-primaria); }
+       h2{
+        color:var(--cor-primaria);
+        padding: var(--espacamento-padrão);
+        border-radius: var(--raio-borda);
+       }
+       a{
+        
+        background-color: var(--cor-secundaria);
+        text-decoration: none;
+        padding-inline:var(--espacamento-padrão);
+        border-radius: var(--raio-borda)
+    
+       }
+
+
+
+</style>
+
+
+</head>
+
+<body>
+    <h1>Trabalhando com variáveis</h1>
+    <div class="explicacao">
+        <h2>O poder das variáveis</h2>
+        <p>As variáveis (ou custom properties) tornam o código CSS mais fácil de manter e organizar, principalmente quando se precisa mudar aspectos visuais de acordo com alguma preferência ou interação do usuário (exemplo: mudança de paleta de cores ou tema visual).</p>
+        <p>Exemplo: se quisermos mudar a cor do link abaixo e do título, basta alterar apenas a variável que define a cor deses elementos</p>
+       
+    </div>
+     <p><a href="">LINK QUALQUER</a></p>
+</body>
+</html>
